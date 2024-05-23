@@ -17,30 +17,22 @@ sea la "class Clase"
     bool operator==(const Clase &clase2)
 
 // Clase1 != Clase2
-	bool operator!=(const Clase &clase2);
+	bool operator!=(const Clase &clase2)
 	
-	
-// std::cout << Clase1
-    friend std::ostream& operator<<(std::ostream &out, const Clase &clase) {
-        out << clase.value;
-        return out;
-    }
+// std::arch << Clase1
+    bool Clase :: operator<<(std::ofstream &arch) ;
 
-    // std::cin >> Clase1
-    friend std::istream& operator>>(std::istream &in, Clase &clase) {
-        in >> clase.value;
-        return in;
-    }
-
+// std::arch >> Clase1
+    bool Clase :: operator>>(std::ifstream &arch);
 
 // ++Clase1 (preincremento)
-    Clase& operator++()
+    Clase operator++()
 
 // Clase1++ (postincremento)
     Clase operator++(int)
 	
 // --Clase1 (predecremento)
-    Clase& operator--() 
+    Clase operator--() 
 	
 	
 // Clase1-- (postdecremento)
