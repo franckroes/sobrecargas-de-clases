@@ -19,11 +19,12 @@ sea la "class Clase"
 // Clase1 != Clase2
 	bool operator!=(const Clase &clase2)
 	
-// std::arch << Clase1
-    bool Clase :: operator<<(std::ofstream &arch) ;
-
-// std::arch >> Clase1
-    bool Clase :: operator>>(std::ifstream &arch);
+// arch << Clase1
+Se define afuera:
+    bool operator<<(ofstream &arch,class Clase &clase1) ;
+Se define afuera:
+// arch << Clase1
+    bool operator>>(ifstream &arch,class Clase &clase1) ;
 
 // ++Clase1 (preincremento)
     Clase operator++()
